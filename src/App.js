@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Lista from './components/Lista';
+import MostrarLista from './components/MostrarLista';
+import {useState} from 'react';
+import EliEleArre from './hooks/EliEleArr';
 
 function App() {
+  const [datosControl,setDatosControl]=useState([false]);
+  const [datos,setDatos]=useState([]);
+  const auxDatos=(e)=>{
+    setDatos(old=>[...old,e]);
+  }
+  const control=()=>{
+    setDatosControl(old=>[...old,false]);
+  }
+  const eliminarDato=(eliminar)=>{
+    setDatos(old=>[...EliEleArre(old,eliminar)]);
+    setDatosControl(old=>[...EliEleArre(old,eliminar)]);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Lista msg={auxDatos} contro={control}/>
+        <MostrarLista add={datos} delete={eliminarDato} checked={datosControl} checkedControl={setDatosControl}/>
     </div>
   );
 }

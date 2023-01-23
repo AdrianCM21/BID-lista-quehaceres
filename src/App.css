@@ -28,11 +28,61 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form_input{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  margin: auto;
+  width:200px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus{ outline:none; }
+.label-conten{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.btn{
+  margin: 10px;
+  width: 250px;
+  height: 40px;
+  font-size: 1.3em;
+  color: #fff;
+  background-color: #5abccc;
+  border: 3.5px solid #000;
+  box-shadow: 5px 5px 2px  #000;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.form{
+  padding: 10px 30px;
+  width: 300px;
+  margin: 10px;
+  margin-top: 10px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+.lista{
+  display: flex;
+  width: 70vw;
+  margin: 20px auto;
+  padding: 20px;
+  justify-content: space-between;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  font-size: 1.3em;
+}
+.btn-delate{
+  width: 100px;
+  height: 40px;
+  font-size: 1.3em;
+  color: #fff;
+  background-color: #a3041a;
+  border: 3.5px solid #000;
+  box-shadow: 5px 5px 2px  #000;
+}
+.container-lista{
+  font-weight: 900;
 }
