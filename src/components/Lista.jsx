@@ -7,6 +7,7 @@ const Lista =(props)=>{
         e.preventDefault();
         props.msg(tarea);
         props.contro();
+        setTarea('');
     }
     return(<div>
         <form  onSubmit={envio} className="container">
